@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Oct  9 07:20:36 2020
+Created on Tue Oct 13 08:13:34 2020
 
 @author: elham
 """
@@ -12,7 +12,7 @@ class Coords(namedtuple('Coords', 'x y')):
         # These are very immutable.   
         return self  
     
-class Agent(namedtuple('Agent', 'location orientation hasGold hasArrow isAlive')):
+class AgentState(namedtuple('AgentState', 'location orientation hasGold hasArrow isAlive')):
     
     def forward(self, gridwidth, gridheight):
         if self.orientation=="West":
@@ -45,11 +45,11 @@ class Agent(namedtuple('Agent', 'location orientation hasGold hasArrow isAlive')
             else:
                 NewOrientation="West"                
         return NewOrientation
-
-def useArrow(self):
-    hasArrow=False
-    #newState=(self.location, self.orientation, self.hasGold, hasArrow, self.isAlive)
-    return hasArrow
-
-def show(self):
-    print (self.location, self.orientation, self.hasGold. self.hasArrow, self.isAlive)
+    
+    def useArrow(self):
+        hasArrow=False
+        #newState=(self.location, self.orientation, self.hasGold, hasArrow, self.isAlive)
+        return hasArrow
+    
+    def show(self):
+        print (self.location, self.orientation, self.hasGold. self.hasArrow, self.isAlive)
